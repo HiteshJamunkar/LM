@@ -1,0 +1,11 @@
+.img1 {
+    height: 300px;
+    width: 490px;
+}
+
+#detailed-news {
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 10px;
+    width: 60%;
+}

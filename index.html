@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business News Today: Read Latest Business News, Live India Share Market News, Finance & Economy Nws | Mint</title>
+    <link rel="stylesheet" href="./style/navbar.css">
+    <link rel="stylesheet" href="./style/sidebar.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://kit.fontawesome.com/f84f445020.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style/carousel.css">
+   <link rel="stylesheet" href="./style/style.css">
+</head>
+<style>
+   /* mini Popup */
+   .mini{
+            width: 150px;
+            height: 58px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            border-radius: 4PX;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            display: none;
+
+
+        }
+   .mini.miniActive{
+      width: 150px;
+            height: 58px;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            border-radius: 4PX;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            position: absolute;
+            margin-left: 25px;
+            margin-top: 22px;
+        }
+
+        #text{
+            font-size: 16px;
+            color: gray;
+            height: 18px;
+            padding-left: 17px;
+        }
+        #icon{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        #icon i{
+            cursor: pointer;
+        }
+        #a{
+            position: absolute;
+            top: 25px;
+            left: 25px;
+        }
+        #b{
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+        #a{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+      
+</style>
+ 
+<body>
+
+    
+    
+   <img src="https://i.ibb.co/1s2vZCY/Screenshot-2022-05-02-192729.png" alt="" id="btn" > 
+    <nav id="sidebar">
+       
+       <ul>
+          <li class="active"><a href="#"><i class="fa-solid fa-award"></i>&nbsp&nbsp Subscribe<span class="fa-solid fa-angle-right"></span></a></li>
+          <li><a href="#"><i class="fa-regular fa-star"></i>&nbsp&nbspMy Reads<span class="fa-solid fa-angle-right"></span></a></li>
+          <li><a href="#"><i class="fa-solid fa-newspaper"></i>&nbsp&nbspe-Paper <img src="https://i.ibb.co/4mB1QV0/Screenshot-2022-05-03-125703.png" class="new" alt=""> <span class="fa-solid fa-angle-right"></span></a></li>
+          <li><a href="#"><i class="fa-solid fa-bell"></i></i>&nbsp&nbspNotifications<span class="fa-solid fa-angle-right"></span></a></li>
+          <li><a href="#"><i class="fa-solid fa-envelope-open-text"></i>&nbsp&nbspNewsletters <span class="fa-solid fa-angle-right"></span></a></li>
+          <li><a href="#">IFSC Code Finder <img src="https://i.ibb.co/4mB1QV0/Screenshot-2022-05-03-125703.png" class="new" alt=""> <span class="fa-solid fa-angle-right"></span></a></li>
+
+          <li class="listItems"><a href="#">THE WALL STREET</a></li>
+          <li class="listItems"><a href="#">MintGenie</a></li>
+          <li class="listItems"><a href="#">For You </a></li>
+          <li class="listItems"><a href="#"><b>Top Sections </b> </a></li>
+
+
+
+
+          <li>
+             <a href="#" class="feat-btn">Features
+             <span class="fas fa-caret-down first"></span>
+             </a>
+             <ul class="feat-show">
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Elements</a></li>
+             </ul>
+          </li>
+          <li>
+             <a href="#" class="serv-btn">Services
+             <span class="fas fa-caret-down second"></span>
+             </a>
+             <ul class="serv-show">
+                <li><a href="#">App Design</a></li>
+                <li><a href="#">Web Design</a></li>
+             </ul>
+          </li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">Shortcuts</a></li>
+          <li><a href="#">Feedback</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">Shortcuts</a></li>
+          <li><a href="#">Feedback</a></li>
+       </ul>
+    </nav>
+
+
+    <div id="navbar">
+        
+       
+    </div>
+    <!-- Account Section  -->
+    <div id="account_id">
+         <div id="signIna">
+             <div id="signInProfile">
+                 <h2 id="closeAccoutnPro">X</h2>
+                   <h1 id="firstLetter"></h1>
+                  <h5 id="userName"></h5>
+                  <h6 id="userDetails">rovin7678@gmail.com</h6>
+                  <h5 class="edit">Edit Profile</h5>
+             </div>
+         </div>
+         <div id="signInSub">
+             <p>Subscribe Now</p>
+         </div>
+             <ul id="accountUl">
+                 <li><span><img src="https://png.pngtree.com/element_our/sm/20180626/sm_5b321c99945a2.jpg" alt="" width="20px"></span> 
+                       Get Alert on Whatsapp</li>
+                 <li>Set Preferences</li>
+                 <li>My Reads</li>
+                 <li>Redeem a Gift Card</li>
+                 <li onclick="signOut()" id="logOut">Logout</li>
+             </ul>
+     </div>
+    <div class="timediv">
+        <p id="todayDate"></p>
+    </div>
+
+    <div class="container">
+       <div id="left-container">
+          
+            <li class="list active"><a href="index.html">Home</a></li>
+            <li>Latest</li>
+            <li>Markets</li>
+            <li>Premium</li>
+            <li>For You</li>
+
+          <hr>
+          <div id="bottom-list">
+             <li> LIC IPO</li>
+             <li>Market Dashboard</li>
+             <li>Mint SnapView</li>
+             <li>Plain Facts</li>
+             <li>Long Story</li>
+             <li>Mark To Market</li>
+             <li>Primer</li>
+             <li>Videos</li>
+             <li>Money</li>
+             <li>Start-ups</li>
+             <li>News</li>
+             <li>Mutual Funds</li>
+             <li>Cryptocurrency</li>
+             <li>Markets</li>
+             <li>Banking</li>
+             <li>Coronavirus</li>
+             <li>Technology</li>
+             <li>Podcasts</li>
+          </div>
+       </div>
+
+       <div id="right-container">
+              <div id="rleft">
+                 <div id="top-news">
+                     <h1 id="headline"> </h1>
+                     <div id="topimage">
+                        <img alt="" id="headlineimg">
+                     </div>
+                     <div id="headlinebottom"> 
+                        <p id="publisheddate"></p>
+                        <div id="headlineshare">
+                           <i class="fa-regular fa-bookmark" style="font-size:20px "></i>
+                           <i class="fa fa-share-alt" style="font-size:20px "></i>
+                        </div>
+                     </div> 
+                 </div>
+              <div id="carousel_div">
+
+              </div>
+               <!-- datas are appending here -->
+
+              
+               </div>
+              <div id="rright">
+                 <img src="" width="100%" alt="Ad Area">
+                  <div id="recommended">
+                     <span>Recommended For You</span>
+                     <span><i class="fa-solid fa-angle-right"></i></span>
+                  </div>
+                  <div id="right_sidebar_container">
+
+                  </div>
+              </div>
+       </div>
+    </div>
+ 
+
+    <div class="popup" id="popup-1">
+      <div class="overlay"></div>
+      <div id="content">
+        <div class="close-btn" onclick="togglePopup()">&times;</div>
+        <h1 id="popuptext">Wait for it...</h1>
+        <p id="popuptextp">Log in to our website to save your </p>
+        <p id="popuptextp">bookmarks. It'll just take a moment.</p>
+        <button id="continueBtn" onclick="signInPage()">Yes,Continue</button>
+      </div>
+    </div>
+
+<!-- mini PopUp -->
+ 
+
+
+</body>
+</html>
+
+<script src="./components/rightsidebar.js"></script>
+<script src="./scripts/navbar.js" type="module"></script>
+<script src="./scripts/carousel.js" type="module" ></script>
+<script>
+          const toggle = document.querySelector("#btn")
+          const sidebar = document.querySelector("#sidebar")
+          document.onclick = function(e){
+              if(e.target.id !== "btn" && e.target.id !== "sidebar")
+              {
+                toggle.classList.remove("active");
+                sidebar.classList.remove("active");
+              }
+          }
+          toggle.onclick = function(){
+              toggle.classList.toggle("active");
+              sidebar.classList.toggle("active");
+          }
+        
+
+
+
+async function fetchdata(){
+   let url = 'https://masai-mock-api.herokuapp.com/news/top-headlines?country=in'
+     let temp= await fetch(url);
+    let data= await temp.json();
+    let fdata= data.articles;
+    let bag = document.createElement("div");
+    let bagleft=document.createElement("div");
+   console.log(fdata)
+    fdata.forEach(({author,title,publishedAt,content,description,urlToImage},index) => {
+      if(index%4==1){
+         let img=document.createElement("img");
+         img.src="components/img/ad1.png";
+         document.getElementById("rleft").append(img);
+      }
+      if(index==0){
+         let headline = document.getElementById("headline")
+         headline.innerText=title;
+         headline.style.cursor = "pointer"
+         document.getElementById("headlineimg").src=urlToImage;
+         document.getElementById("publisheddate").innerText=publishedAt;
+         headline.addEventListener("click",function(){
+         myFn({author,title,publishedAt,content,description,urlToImage})
+         })
+      }
+      else{
+       let bag = document.createElement("div");
+       let bagleft=document.createElement("div");
+       bagleft.style.width="75%";
+       bagleft.style.lineHeight="20px";
+       bagleft.style.display="flex";
+       bagleft.style.padding="10px";
+       bagleft.style.flexDirection="column";
+       bagleft.style.justifyContent="space-between";
+       let bagleftcontainer=document.createElement("div");
+       bagleftcontainer.style.display="flex";
+       bagleftcontainer.style.justifyContent="space-between";
+       let bagleftleft=document.createElement("div");
+       let bagleftright=document.createElement("div")
+       let heading=document.createElement("p");
+       heading.innerHTML=`<b>${title}</b>`;
+       let para=document.createElement("p");
+       para.innerText=`2 min read . ${publishedAt}`;
+       para.style.margin="0"; 
+       let shareoption=document.createElement("div");
+
+       shareoption.style.display="flex";
+       shareoption.style.alignContent="center";
+
+       let bookmark=document.createElement("i");
+       bookmark.setAttribute("class","fa-regular fa-bookmark");
+       bookmark.style.fontSize="20px";
+      bookmark.style.cursor="pointer";
+       bookmark.addEventListener("click",function(){
+         togglePopup();
+       })
+
+       let share=document.createElement("i");
+       share.setAttribute("class","fa fa-share-alt");
+       share.style.fontSize="20px";
+       share.style.paddingLeft="10px";
+   
+     let minidiv=document.createElement("div");
+     minidiv.setAttribute("class","mini");
+     let sharediv=document.createElement("div");
+     sharediv.setAttribute("id","text");
+     sharediv.innerText="Share Via";
+     let icondiv=document.createElement("div");
+     icondiv.setAttribute("id","icon");
+     let ifav=document.createElement("i");
+     ifav.setAttribute("class","fa-brands fa-facebook-square")
+     let ilink=document.createElement("i");
+     ilink.setAttribute("class","fa-brands fa-linkedin-in");
+     let itwit=document.createElement("i");
+     itwit.setAttribute("class","fa-brands fa-twitter");
+     icondiv.append(ifav,ilink,itwit);
+     minidiv.append(sharediv,icondiv);
+
+       shareoption.append(bookmark,share,minidiv);
+       share.style.cursor="pointer";
+       share.addEventListener("click",function(){
+       
+      if(minidiv){
+    minidiv.classList.toggle("miniActive");
+    // if(!popup.classList.contains("active")){
+    //   popup.parentElement.removeChild(popup);
+    // }
+  }
+
+    } )
+
+       bagleftcontainer.append(para,shareoption);
+       bagleft.append(heading,bagleftcontainer);
+       let bagright=document.createElement("div");
+       bagright.style.display="flex";
+       bagright.style.justifyContent="center";
+       bagright.style.padding="20px";
+       bagright.style.width="25%";
+       let img=document.createElement("img");
+       img.src=urlToImage;
+       img.style.borderRadius="10px";
+       img.style.width="100%";
+       bagright.append(img);
+       bag.append(bagleft,bagright);
+       bag.setAttribute("id","bot-news")
+       document.getElementById("rleft").append(bag); 
+       heading.style.cursor="pointer";
+       heading.addEventListener("click",function(){
+         myFn({author,title,publishedAt,content,description,urlToImage})
+      })
+
+      }
+        
+    });     
+}
+
+
+// function bookmarkFunction(){
+//    console.log("skfhf");
+//    // window.location.href="./popup.html"
+// }
+
+fetchdata();
+function myFn({author,title,publishedAt,content,description,urlToImage}){
+   let data = {author:author,title:title,publishedAt:publishedAt,content:content,description:description,urlToImage:urlToImage}
+   localStorage.setItem("newsData",JSON.stringify(data))
+   window.location.href = "news.html"
+}
+
+
+
+
+function togglePopup(){
+  let popup = document.getElementById("popup-1");
+  if(popup){
+    popup.classList.toggle("active");
+    // if(!popup.classList.contains("active")){
+    //   popup.parentElement.removeChild(popup);
+    // }
+  }
+}
+/* document.onclick = function(e){
+              if(e.target.id !== "content"  && e.target.id !== "sidebar")
+              {
+                popup.classList.remove("active");
+              }
+          } */
+
+function signInPage()
+{
+  window.location.href="./login.html"
+}
+
+function signOut(){
+   localStorage.removeItem("loginData");
+   window.location.reload();
+}
+
+
+let c=-100;
+    function hello(){
+    document.getElementById("icontainer").style.left=`${c}px`;
+        c-=80;
+        if(c<=-1320){
+            document.getElementById("left").style.display="none";
+        }
+        if(c==-20){
+            document.getElementById("right").style.display="block"; 
+        }
+ 
+    }
+    function hello2(){
+        c+=80;
+      document.getElementById("icontainer").style.left=`${c}px`;
+      
+     if(c==-1300){
+        document.getElementById("left").style.display="block";
+     }
+     if(c==60){
+        document.getElementById("right").style.display="none";
+     }
+
+    }
+
+
+</script>
+
+

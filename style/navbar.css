@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+body {
+    font-family: 'lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F6F6F6;
+}
+
+#navbar {
+    height: 62px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    flex-direction: row;
+    flex-wrap: wrap;
+    z-index: 1;
+    background-color: #FFFFFF;
+}
+
+#midNav img {
+    width: 100px;
+    height: 35px;
+    display: flex;
+    position: relative;
+    top: 40%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+#leftNav {
+    width: 120px;
+}
+
+#rightNav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    font-weight: 350;
+    font-size: 16px;
+    margin-right: 15px;
+    background-color: #ffffff;
+}
+
+#rightNav ul a {
+    text-decoration: none;
+    color: black;
+}
+
+#rightNav ul a:hover {
+    color: gray;
+}
+
+.timediv {
+    height: 105px;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    background: #ffffff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: left;
+}
+
+.timediv p {
+    margin-right: 28px;
+    color: #F99D1C;
+}
+
+.search-box {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    height: 40px;
+    border-radius: 40px;
+    margin-top: 40px;
+    margin-left: -30px;
+    color: white;
+}
+
+.search-box:hover>#search-txt {
+    width: 240px;
+    padding: 0 6px;
+    top: 50px;
+    border: 1px solid grey;
+    color: black;
+}
+
+.search-box:hover>.search-btn {
+    background: white;
+}
+
+.search-btn {
+    color: orange;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    text-decoration: none;
+}
+
+#search-txt {
+    border: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+    border-radius: 10px;
+}
+
+#rightdiv {
+    display: flex;
+    justify-content: space-between
+}

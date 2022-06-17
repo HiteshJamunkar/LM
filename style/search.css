@@ -1,0 +1,32 @@
+img {
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.box {
+    display: flex;
+    gap: 10px;
+    padding-right: -10px;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.c1 {
+    height: 150px;
+    padding-left: 20px;
+}
+
+.c1:hover {
+    cursor: pointer;
+}
+
+
+.b1 {
+    height: 150px;
+    border-radius: 10px;
+}
+
+.b1:hover {
+    cursor: pointer;
+}
